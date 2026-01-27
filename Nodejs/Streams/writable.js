@@ -1,13 +1,15 @@
 const fs = require('fs');
 const path = require('path');
 
-const inputFilePath = path.join(__dirname,"input.txt");// basename sirf filename niklta hai
+const inputFilePath = path.join(__dirname,"input.txt");
 const outputFilePath = path.join(__dirname,"output.txt");
 
-const inputStream=fs.createReadStream(inputFilePath,'utf8')
+const readStream=fs.createReadStream(inputFilePath,{encoding:"utf8"});
+const writeStream = fs.createWriteStream(outputFilePath)
 
-inputStream.on("data",(chunk)=>{
-    console.log("Data is reading in chunks",chunk);
+readStream.pipe(writeStream);
+
+writeStream.on("finish",()=>{
+    console.log("Write stream is end");
 })
-// const writeStream =fs.createReadStream(inputStream);
-// writeStream.pipe(outputStream);    // connect input output 
+ 
