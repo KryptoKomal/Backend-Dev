@@ -1,0 +1,25 @@
+[
+  {
+    "id": 1,
+    "name": "Anushka",
+    "branch": "CS",
+    "email": "anush@gmail.com"
+  },
+  {
+    "id": 2,
+    "name": "Komal",
+    "branch": "ECE",
+    "email": "bsjbdj@dwkdk"
+  },
+  {
+    "id": 3,
+    "name": "teesha",
+    "branch": "IT",
+    "email": "gdg2dgu@gmail.com"
+  },
+  {
+    "id": 4,
+    "name": "teshs",
+    "branch": "IT"
+  }
+]
