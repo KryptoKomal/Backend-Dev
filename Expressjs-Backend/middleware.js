@@ -5,6 +5,10 @@ const app = express();
 app.use(express.json())
 
 const PORT= 8000;
+
+app.use(express.static(`public`));
+app.use(express.urlencoded({extended:true}));
+app.use()
 app.listen(PORT, () => {
   console.log("Server is listening on port:8000");
 });
