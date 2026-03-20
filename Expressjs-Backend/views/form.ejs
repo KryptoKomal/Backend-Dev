@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add new student</title>
+</head>
+<body>
+    <h1>Add New Student</h1>
+    <form action ="/students/register" method="POST">
+        <input type="text" name="name" placeholder="Enter name" required>
+
+        <select name="branch">
+            <option value="CSE">CSE</option>
+            <option value ="civil">Civil</option>
+            <option value="Mechanical">Mechanical</option>
+        </select>
+        <button type ="submit">Submit</button>
+    </form>
+    <hr>
+    <h3>Current users:</h3>
+   <ul>
+            <% allStudents.forEach(s=>{%>
+                <ul> <%= s.name%></ul>
+            <%})%>
+        </ul>
+    
+</body>
+</html>
